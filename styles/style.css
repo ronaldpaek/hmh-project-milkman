@@ -1,0 +1,249 @@
+body {
+  min-height: 100dvh;
+  font-size: 0.875rem;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    transform 0.1s,
+    box-shadow 0.2s,
+    color 0.2s;
+  outline: none;
+}
+
+.main-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.card {
+  box-shadow: 1px 2px 8px 4px rgba(20, 20, 20, 0.3);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+#cow:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#cow:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#sell-milk {
+  max-width: 276px;
+  flex-grow: 1;
+  padding-block: 7.5px;
+  background: linear-gradient(45deg, #add8e6, #1e90ff);
+  color: #333333;
+  display: none;
+}
+
+#sell-milk span {
+  background: linear-gradient(45deg, #7fff00, #32cd32);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#sell-milk:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#sell-milk:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#bottle-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid #808080;
+}
+
+#bottle-container::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 36px;
+  aspect-ratio: 1/1;
+  background-image: url("/images/milk-bottle.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#bottle-counter {
+  font-size: calc(1rem * 1.5);
+}
+
+
+#cash-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  align-items: flex-start;
+  padding-block: 1rem;
+  border-bottom: 1px solid #808080;
+}
+
+#cash-container::before {
+  content: "";
+  display: block;
+  aspect-ratio: 1/1;
+  width: 36px;
+  height: 36px;
+  background-image: url("/images/cash.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#cash-counter {
+  color: green;
+  font-size: calc(1rem * 1.5);
+}
+
+#cash-container menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  list-style-type: none;
+  padding: 0;
+  gap: 1rem;
+}
+
+#cash-container li {
+  display: none;
+}
+
+#cash-container li button {
+  width: 100%;
+  padding-block: 7.5px;
+  background-color: #6a5acd;
+  color: #333333;
+}
+
+#cash-container li button span {
+  background: linear-gradient(45deg, #ff4500, #ff6347);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#cash-container li button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #333333;
+  color: #6a5acd;
+}
+
+#cash-container li button:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+@media (min-width: 800px) {
+  #cash-container menu {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+#producer-container {
+  padding: 0;
+  padding-top: 1rem;
+}
+
+#producer-container > * + * {
+  margin-top: 1rem;
+}
+
+#producer-container li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  display: none;
+}
+
+#producer-container li:first-of-type::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 36px;
+  aspect-ratio: 1/1;
+  background-image: url("/images/worker.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#producer-container li:nth-of-type(2):before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 36px;
+  aspect-ratio: 1/1;
+  background-image: url("/images/cow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#producer-container li:nth-of-type(3):before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 36px;
+  aspect-ratio: 1/1;
+  background-image: url("/images/farm.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#producer-container li:nth-of-type(4):before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 36px;
+  aspect-ratio: 1/1;
+  background-image: url("/images/ceo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#producer-container li:nth-of-type(5):before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 36px;
+  aspect-ratio: 1/1;
+  background-image: url("/images/planet.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#producer-container li:nth-of-type(6):before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 36px;
+  aspect-ratio: 1/1;
+  background-image: url("/images/universe.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#producer-container li p:first-child {
+  font-size: calc(1rem * 1.5);
+  color: #333333;
+}
+
+#producer-container li p:last-child {
+  background-color: #808080;
+  color: #fffe04;
+  border-radius: 10px;
+  padding: 7.5px 0.25rem;
+}
